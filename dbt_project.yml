@@ -33,8 +33,8 @@ target-path: "target"
 # Variable Configs
 # ==================
 vars:
-  config-1: "DBS_1"
-  config-2: "DBS_2"
+  config1: "DBS_1"
+  config2: "DBS_2"
 
 # ==================
 # Model Configs
