@@ -202,22 +202,7 @@ sqlModels:
     createdAt: '2024-08-05 08:36:43'
   .prophecy/metadata/sqlmodels/baseModel:
     name: baseModel
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: ID
-        dataType:
-          type: Number
-      - name: ORDER_ID
-        dataType:
-          type: Number
-      - name: PAYMENT_METHOD
-        dataType:
-          type: String
-      - name: AMOUNT
-        dataType:
-          type: Number
+    schema: null
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
