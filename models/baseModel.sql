@@ -1,7 +1,7 @@
 {{
   config({    
     "materialized": "table",
-    "schema":  var('config-1') 
+    "schema":  var('config1') 
   })
 }}
 

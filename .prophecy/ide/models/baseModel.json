@@ -10,7 +10,7 @@
     "graphConfig" : {
       "entityConfig" : {
         "materialized" : "table",
-        "schema" : " var('config-1') ",
+        "schema" : " var('config1') ",
         "type" : "ModelConfig"
       }
     },
