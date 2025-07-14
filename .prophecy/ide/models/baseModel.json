@@ -1,0 +1,90 @@
+{
+  "id" : "baseModel",
+  "metainfo" : {
+    "label" : "baseModel",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "table",
+        "schema" : " var('config-1') ",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "baseModel##UP0LMZfJ" : {
+      "id" : "baseModel##UP0LMZfJ",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "baseModel",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM raw_payments\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "zBhFUqGE",
+          "slug" : "raw_payments"
+        } ],
+        "outputs" : [ {
+          "id" : "XnGOOPsp",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "mlKyjNdESqgQvL7d7RFA_" : {
+      "id" : "mlKyjNdESqgQvL7d7RFA_",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "raw_payments",
+        "slug" : "raw_payments",
+        "x" : -160,
+        "y" : 40,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "raw_payments",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "mXexGNMe650Ab6KIqmWIA",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "slvvE08aKGlmTVlzilvdn",
+    "source" : "mlKyjNdESqgQvL7d7RFA_",
+    "sourcePort" : "mXexGNMe650Ab6KIqmWIA",
+    "target" : "baseModel##UP0LMZfJ",
+    "targetPort" : "zBhFUqGE"
+  } ],
+  "component" : "Model"
+}
