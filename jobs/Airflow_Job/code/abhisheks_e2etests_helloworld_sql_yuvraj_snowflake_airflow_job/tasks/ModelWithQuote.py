@@ -29,7 +29,7 @@ def ModelWithQuote():
           "select": "",
           "threads": "",
           "exclude": "",
-          "run_props": " --profile run_profile_snowflake --vars '{\"config-1\":\"ModelWithQuote_{{var.value.config-2}}\"}'",
+          "run_props": " --profile run_profile_snowflake --vars '{\"config1\":\"ModelWithQuote_{{var.value.config2}}\"}'",
           "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"}
         },
     )
